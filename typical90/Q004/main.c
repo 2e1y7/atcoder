@@ -37,13 +37,16 @@ int main(void){
         for(j = 0; j < W; j++){
             H_sum[i] = H_sum[i] + A[i][j];
         }
+        // printf("H_sum[%d]: %d\n", i, H_sum[i]);
+
     }
 
-    for(i = 0; i < H; i++){
+    for(i = 0; i < W; i++){
         W_sum[i] = 0;
-        for(j = 0; j < W; j++){
-            W_sum[i] = W_sum[i] + A[i][j];
+        for(j = 0; j < H; j++){
+            W_sum[i] = W_sum[i] + A[j][i];
         }
+        // printf("W_sum[%d]: %d\n", i, W_sum[i]);
     }
 
     for(i = 0; i < H; i++){
